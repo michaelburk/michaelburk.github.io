@@ -4,10 +4,16 @@
 </head>
 
 <body>
-<%import urlparpse
-code = self.request.get("code")
-print code
-%>
+<script type="text/javascript">
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+var code = getParameterByName('code');
+document.write(code);
+</script>
 <p>Hello world!</p>
 </body>
 
