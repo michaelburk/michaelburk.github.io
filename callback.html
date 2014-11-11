@@ -12,9 +12,8 @@ function getParameterByName(name) {
     return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
 var code = getParameterByName('code');
-document.write(code);
+document.write('<a href=bcapp://callback.html?code=' + code + '>Click here to continue</a>');
 </script>
-<p>Hello world!</p>
 </body>
 
 </html>
